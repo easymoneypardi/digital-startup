@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/portrætSpejlvendt.jpg" id="pardiImg" />
-    <h1 id="liste">🎅 Ønskeseddel ⛄ Mathias Pardi Nielsen</h1>
+    <h1 id="liste">Min ønskeliste 🎅 Mathias Pardi Nielsen</h1>
     <post-list></post-list>
   </div>
 </template>

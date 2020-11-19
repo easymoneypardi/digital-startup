@@ -4,14 +4,12 @@
       <img :src="post.image" />
       <h3>{{ post.description }}</h3>
       <router-link :to="{ name: 'Update', params: { post: post } }">
-        <button id="opdater">Opdater</button>
+        <button class="example_a">Opdater</button>
       </router-link>
-      <br>
-      <button v-on:click="deletePost(post)" id="slet">Slet ønske</button>
+      <button v-on:click="deletePost(post)" class="example_a">Slet ønske</button>
     </article>
   </div>
 </template>
-
 
 <script>
 import { postRef } from "../firebase-db";
@@ -62,11 +60,30 @@ export default {
   margin: 0 0 1.5em;
 }
 
-#opdater {
-  margin-bottom: 20px;
+.example_a {
+color: #fff !important;
+text-decoration: none;
+background: #ff304f;
+padding: 15px;
+margin-right: 20px;
+margin-left: 20px;
+margin-bottom: 50px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
 }
 
-#slet {
-  margin-bottom: 70px;
+.example_a:hover {
+background: #85203b;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+
+img {
+  height: 400px;
 }
 </style>

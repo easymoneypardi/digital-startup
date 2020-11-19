@@ -14,13 +14,13 @@
         accept="image/*"
         v-on:change="previewImage"
       />
-      <button class="choose-image" type="button" v-on:click="triggerChooseImg">
+      <button class="example_a" type="button" v-on:click="triggerChooseImg">
         Tilføj billede
       </button>
       <div>
         <img :src="post.image" class="image-preview" />
       </div>
-      <button type="button" v-on:click="updatePost">Opdater ønske</button>
+      <button class="example_a" type="button" v-on:click="updatePost">Opdater ønske</button>
     </form>
   </div>
 </template>
@@ -60,19 +60,30 @@ export default {
 form {
   padding: 2em 1em 2.5em;
 }
-button.choose-image {
-  background-color: var(--primary);
+
+.example_a {
+color: #fff !important;
+text-decoration: none;
+background: #ff304f;
+padding: 15px;
+margin-right: 20px;
+margin-left: 20px;
+margin-bottom: 50px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
 }
-/* article button {
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  padding: 10px 8px;
-  border-radius: 0;
-  color: var(--text-color-light);
-  background-color: var(--green);
-  width: 40%;
-} */
+
+.example_a:hover {
+background: #85203b;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+
 input {
   margin: 1em auto;
   width: 100%;
